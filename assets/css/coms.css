@@ -1,0 +1,5 @@
+.tlW{position:relative;}
+.tl_view{text-align:center;}
+.tl_nodes{width:700px; height:98px; border:1px solid red; margin:0px auto; overflow:hidden;}
+.tl_nodes_w{}
+.tl_node{float:left; width:98px; height:98px; border:1px solid blue;}
