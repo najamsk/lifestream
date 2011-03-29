@@ -1,7 +1,7 @@
 var lnaa = lifenotesAPP  = function(tlW)
 {
     var author_name = "najam sikander awan", 
-		author_email = "najamsk@gmail.com",
+    	author_email = "najamsk@gmail.com",
 		tl_nodes_w = tlW.find("#tl_nodes_w"),
 		tl_node = tlW.find(".tl_node");
 
@@ -19,17 +19,13 @@ var lnaa = lifenotesAPP  = function(tlW)
 }
 
 
-var LIFESTREAM = LIFESTREAM || {};
+var LIFEJS = LIFEJS || {};
 
-LIFESTREAM = {
-						"author" : {name:"najam sikander awan", email:"najamsk@gmail.com"}
-						};
-
-LIFESTREAM.namespace = function(ns_string){
+LIFEJS.namespace = function(ns_string){
 var parts = ns_string.split('.'),
-parent = LIFESTREAM, i;
+parent = LIFEJS, i;
 
-    if(parts[0] === "LIFESTREAM"){
+    if(parts[0] === "LIFEJS"){
         parts = parts.slice(1);
         
     }
@@ -40,14 +36,25 @@ parent = LIFESTREAM, i;
             parent[parts[i]] = {};        
         }
         
-        parent = parent[parts[i]]
+        parent = parent[parts[i]];
+		var thekey = parts[i];
     }
-    return parent;
+    return parent; //returning last element from ns_string
 };
+LIFEJS.namespace("data.user.timeline");
 
-LIFESTREAM.namespace("data.user.timeline");
-
-
+//Author module
+LIFEJS.author = (function(){
+    //private vars
+    
+	//private functions
+	
+	//public parts - closures 
+	return 	{
+			name:"najam sikander awan", 
+			email:"najamsk@gmail.com"
+			};
+}());
 
 jQuery(function($){
 	myobj = new lnaa($("#tlW"));
