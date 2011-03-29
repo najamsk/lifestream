@@ -46,7 +46,7 @@ LIFEJS.namespace("data.user.timeline");
 //Author module
 LIFEJS.author = (function(){
     //private vars
-    
+	
 	//private functions
 	
 	//public parts - closures 
@@ -54,7 +54,7 @@ LIFEJS.author = (function(){
 			name:"najam sikander awan", 
 			email:"najamsk@gmail.com"
 			};
-}());
+}.apply(LIFEJS)); //binding this to LIFEJs object
 
 jQuery(function($){
 	myobj = new lnaa($("#tlW"));
